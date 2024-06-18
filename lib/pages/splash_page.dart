@@ -1,12 +1,8 @@
 import 'dart:async';
-import 'dart:html';
-
 import "package:flutter/material.dart";
 
-import 'package:flutter/material.dart';
-
 class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+  const SplashPage({super.key});
 
   @override
   State<SplashPage> createState() => _SplashPageState();
@@ -17,7 +13,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 2), () => Navigator.pushNamed(context, '/login'));
+    Timer(const Duration(seconds: 2), () => Navigator.pushNamed(context, '/login'));
   }
 
   @override
@@ -39,6 +35,7 @@ class _SplashPageState extends State<SplashPage> {
                 color: Colors.white,
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
+                fontFamily: 'Inter',
               ),
             )
           ],

@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:itcmobile/pages/home_page.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +15,7 @@ class LoginPage extends StatelessWidget {
       body: Center(
         child: Container(
           width: 352,
-          height: 413,
+          height: 450,
           decoration: BoxDecoration(
             color: const Color.fromRGBO(
               188,
@@ -26,29 +30,31 @@ class LoginPage extends StatelessWidget {
               const SizedBox(
                 height: 29,
               ),
-              Text(
+              const Text(
                 'Login',
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w700,
+                    fontFamily: 'Inter',
                     color: Color.fromRGBO(0, 148, 255, 1.0)),
               ),
               const SizedBox(
                 height: 27,
               ),
-              Text(
+              const Text(
                 'Silahkan Masukkan Username\ndan Password Anda!',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w500,
+                    fontFamily: 'Inter',
                     color: Color.fromRGBO(59, 102, 168, 1.0)),
               ),
               const SizedBox(
                 height: 27,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: TextField(
                   decoration: InputDecoration(
                     filled: true,
@@ -67,7 +73,7 @@ class LoginPage extends StatelessWidget {
                 height: 27,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: TextField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -90,15 +96,15 @@ class LoginPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, '/home');
                 },
-                child: Text(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromRGBO(59, 102, 168, 1.0),
+                ),
+                child: const Text(
                   'Login',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.w700),
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromRGBO(59, 102, 168, 1.0),
                 ),
               ),
               const SizedBox(
@@ -106,11 +112,12 @@ class LoginPage extends StatelessWidget {
               ),
               TextButton(
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'Forgot Password?',
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 13,
+                        fontFamily: 'Inter',
                         fontWeight: FontWeight.w500),
                   ))
             ],
@@ -120,3 +127,4 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
