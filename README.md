@@ -1,6 +1,4 @@
-# itc_mobile_app
-
-A new Flutter project.
+# ITC_Mobile
 
 ## Getting Started
 
