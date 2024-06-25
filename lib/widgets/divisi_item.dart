@@ -15,7 +15,6 @@ class DivisiItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
       margin: EdgeInsets.symmetric(vertical: 4),
       child: Row(
         children: [

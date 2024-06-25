@@ -22,7 +22,10 @@ class HomePage extends StatelessWidget {
           child: CircleAvatar(
             radius: 190,
             backgroundColor: Colors.grey[300],
-            child: const Text('A'),
+            child: const Text(
+              'A',
+              style: TextStyle(fontSize: 27),
+            ),
           ),
         ),
         title: const Text(
