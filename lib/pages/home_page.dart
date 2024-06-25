@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:itc_mobile_app/widgets/divisi_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -7,19 +9,20 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 170,
+        toolbarHeight: MediaQuery.of(context).size.height / 6,
         backgroundColor: const Color.fromRGBO(59, 102, 168, 1.0),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(25),
               bottomRight: Radius.circular(25)),
         ),
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 21.0),
+        leadingWidth: MediaQuery.of(context).size.width / 4,
+        leading: Container(
+          margin: EdgeInsets.only(left: 15, bottom: 15),
           child: CircleAvatar(
-            radius: 50,
+            radius: 190,
             backgroundColor: Colors.grey[300],
-            child: Text('A'),
+            child: const Text('A'),
           ),
         ),
         title: const Text(
@@ -32,92 +35,28 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: const Padding(
-        padding: const EdgeInsets.all(25.0),
-        child: Column(
-          children: [
-            const SizedBox(height: 40),
-            Row(
-              children: [
-                Icon(
-                  Icons.phone_android,
-                  size: 110,
-                  color: Colors.blue,
-                ),
-                Text(
-                  'Mobile\nDevelopment',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'Inter',
-                    color: Color.fromRGBO(59, 102, 168, 1.0),
-                  ),
-                )
-              ],
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Row(
-              children: [
-                Icon(
-                  Icons.computer,
-                  size: 110,
-                  color: Colors.blue,
-                ),
-                Text(
-                  'Computer\nGraphic',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'Inter',
-                    color: Color.fromRGBO(59, 102, 168, 1.0),
-                  ),
-                )
-              ],
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Row(
-              children: [
-                Icon(
-                  Icons.volume_down,
-                  size: 110,
-                  color: Colors.blue,
-                ),
-                Text(
-                  'Digital\nMarketing',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'Inter',
-                    color: Color.fromRGBO(59, 102, 168, 1.0),
-                  ),
-                )
-              ],
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Row(
-              children: [
-                Icon(
-                  Icons.local_post_office_outlined,
-                  size: 110,
-                  color: Colors.blue,
-                ),
-                Text(
-                  'Office\nAdministration',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'Inter',
-                    color: Color.fromRGBO(59, 102, 168, 1.0),
-                  ),
-                )
-              ],
-            ),
-          ],
+        padding: EdgeInsets.all(0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              DivisiItem(
+                title: "Mobile\nDevelopment",
+                imageSource: "assets/mobile_development.jpg",
+              ),
+              DivisiItem(
+                title: "Computer\nGraphic",
+                imageSource: "assets/computer_graphic.png",
+              ),
+              DivisiItem(
+                title: "Digital\nMarketing",
+                imageSource: "assets/digital_marketing.png",
+              ),
+              DivisiItem(
+                title: "Office\nAdministration",
+                imageSource: "assets/digital_marketing.png",
+              ),
+            ],
+          ),
         ),
       ),
     );
