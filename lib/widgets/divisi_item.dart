@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 class DivisiItem extends StatelessWidget {
   final String title;
   final String imageSource;
-  final VoidCallback? onTap;
 
   const DivisiItem({
     super.key,
-    this.onTap,
     required this.title,
     required this.imageSource,
   });

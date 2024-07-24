@@ -11,9 +11,9 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    Timer(const Duration(seconds: 2), () => Navigator.pushNamed(context, '/login'));
+    Timer(const Duration(seconds: 2),
+        () => Navigator.pushNamed(context, '/login'));
   }
 
   @override
@@ -25,7 +25,7 @@ class _SplashPageState extends State<SplashPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/profil.JPG',
+              'assets/logo.png',
               width: 150,
             ),
             const SizedBox(height: 14),

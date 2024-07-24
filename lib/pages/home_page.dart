@@ -20,13 +20,11 @@ class HomePage extends StatelessWidget {
         leading: Container(
           margin: EdgeInsets.only(left: 15, bottom: 15),
           child: CircleAvatar(
-            radius: 190,
-            backgroundColor: Colors.grey[300],
-            child: const Text(
-              'A',
-              style: TextStyle(fontSize: 27),
-            ),
-          ),
+              radius: 190,
+              backgroundColor: Colors.grey[300],
+              child: Image.asset(
+                'male.png',
+              )),
         ),
         title: const Text(
           'Hi, Annisa Silvia!',
@@ -37,29 +35,26 @@ class HomePage extends StatelessWidget {
               color: Colors.white),
         ),
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(0),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              DivisiItem(
-                title: "Mobile\nDevelopment",
-                imageSource: "assets/mobile_development.jpg",
-              ),
-              DivisiItem(
-                title: "Computer\nGraphic",
-                imageSource: "assets/computer_graphic.png",
-              ),
-              DivisiItem(
-                title: "Digital\nMarketing",
-                imageSource: "assets/digital_marketing.png",
-              ),
-              DivisiItem(
-                title: "Office\nAdministration",
-                imageSource: "assets/digital_marketing.png",
-              ),
-            ],
-          ),
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            DivisiItem(
+              title: "Mobile\nDevelopment",
+              imageSource: "assets/md.png",
+            ),
+            DivisiItem(
+              title: "Computer\nGraphic",
+              imageSource: "assets/cg.png",
+            ),
+            DivisiItem(
+              title: "Digital\nMarketing",
+              imageSource: "assets/dm.png",
+            ),
+            DivisiItem(
+              title: "Office\nAdministration",
+              imageSource: "assets/oa.png",
+            ),
+          ],
         ),
       ),
     );
