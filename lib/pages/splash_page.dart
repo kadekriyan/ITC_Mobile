@@ -12,8 +12,13 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 2),
-        () => Navigator.pushNamed(context, '/login'));
+    Timer(
+        const Duration(seconds: 2),
+        () => Navigator.pushNamedAndRemoveUntil(
+              context,
+              '/login',
+              ModalRoute.withName('/login'),
+            ));
   }
 
   @override
