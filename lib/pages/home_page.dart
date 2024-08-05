@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
               radius: 190,
               backgroundColor: Colors.grey[300],
               child: Image.asset(
-                'male.png',
+                'assets/male.png',
               )),
         ),
         title: const Text(
@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
               color: Colors.white),
         ),
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             DivisiItem(
