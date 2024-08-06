@@ -61,11 +61,11 @@ class _LoginPageState extends State<LoginPage> {
                     fillColor: Colors.white,
                     hintText: 'Username',
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide.none),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide.none),
                   ),
                 ),
               ),
@@ -81,11 +81,11 @@ class _LoginPageState extends State<LoginPage> {
                     fillColor: Colors.white,
                     hintText: 'Password',
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide.none),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide.none),
                   ),
                 ),
               ),
